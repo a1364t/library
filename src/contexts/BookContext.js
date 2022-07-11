@@ -5,16 +5,16 @@ export const Bookcontext = createContext();
 
 const BookContextProvider = (props) => {
     const [books, setBook] = useState([
-        {title: 'Book1', author:'Author 1', id:1},
-        {title: 'Book2', author:'Author 2', id:2}
+        {title: 'Book1', author:'Author 1', year:'2020', id:1},
+        {title: 'Book2', author:'Author 2', year:'2020', id:2}
     ])
 
     const removeBook = (id)=>{
         setBook(books.filter(book=> book.id !== id))
     }
 
-    const addBook = (title, author)=>{
-        setBook([...books, {title, author, id:uuid()}])
+    const addBook = (title, author, year)=>{
+        setBook([...books, {title, author, year, id:uuid()}])
     }
     
     return ( 
