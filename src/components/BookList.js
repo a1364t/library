@@ -16,7 +16,7 @@ const BookList = () => {
         </div>
      ):(
         <div className='empty'>
-            No book found!
+            No Book Found!
         </div>
      )
 }
